@@ -14,7 +14,7 @@ gray = color.gray(0.7) # color of edges of container
 mass = 4E-3/6E23 # helium mass
 Ratom = 0.03 # wildly exaggerated size of helium atom
 k = 1.4E-23 # Boltzmann constant
-T = 300 # around room temperature
+T = 50 # around room temperature
 dt = 1E-5
 
 animation = canvas( width=win, height=win, align='left')
@@ -74,7 +74,7 @@ for i in range(nhisto): histo.append(0.0)
 histo[barx(pavg/mass)] = Natoms
 
 gg = graph( width=win, height=0.4*win, xmax=3000, align='left',
-    xtitle='speed, m/s', ytitle='Number of atoms', ymax=Natoms*deltav/1000)
+    xtitle='speed, m/s', ytitle='Number of atoms', ymax=Natoms*deltav/200)
 
 theory = gcurve( color=color.cyan )
 dv = 10
